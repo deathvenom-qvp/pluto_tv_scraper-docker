@@ -1,7 +1,7 @@
 # pluto_tv_scraper-docker
 
-This repo builds and Docker image of [pluto_tv_scraper](https://github.com/4v3ngR/pluto_tv_scraper).
-The purpose is to make the deployment easier and more suitable for different environments.
+This repo builds and Docker image of [pluto_tv_scraper](https://github.com/4v3ngR/pluto_tv_scraper).<br>
+The purpose is to make the deployment easier and more suitable for different environments.<br>
 As a result an m3u8 playlist and xmltv file will be generated for pluto TV.
 
 ## Dependencies
