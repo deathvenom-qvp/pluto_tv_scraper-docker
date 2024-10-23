@@ -35,7 +35,7 @@ If you include more than one country in the mapping section `plutotv_all.m3u8` a
 | chno                          | Start channel numbering at the provided value, spans all regions.                    | N/A                                    |
 | group                         | Specify the grouping within the playlist.                                            | `genre`                                |
 | regionalize                   | Append the country code to the channel id.                                           | true                                   |
-| excludeGroups                 | Exclude the groups that match the regular expression.<br>An example value could be `^Local News$``Español` or `(News\|Español)` | false                                  |
+| excludeGroups                 | Exclude the groups that match the regular expression.<br>An example value could be `^Local News$`, `Español` or `(News\|Español)` | false                                  |
 | excludeChannels               | Exclude the channels that match the regular expression.                              | false                                  |
 | uniqueClientid                | Generate a unique id for each client requesting the playlist via the inbuilt server. | true                                   |
 | randomClientid                | Generate a random id for each request of the playlist via the the inbuilt server.    | true                                   |
