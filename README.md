@@ -2,6 +2,7 @@
 
 This repo builds and Docker image of [pluto_tv_scraper](https://github.com/4v3ngR/pluto_tv_scraper).
 The purpose is to make the deployment easier and more suitable for different environments.
+As a result an m3u8 playlist and xmltv file will be generated for pluto TV.
 
 ## Dependencies
 [Node](https://nodejs.org/en)<br>
@@ -26,20 +27,21 @@ If you include more than one country in the mapping section `plutotv_all.m3u8` a
 
 ##### Options:
 
-| Variable                      | Description                                                                         | Default                                |
-|-------------------------------|-------------------------------------------------------------------------------------|----------------------------------------|
-| outdir                        | The destination directory where the generated files will be stored.                 | `/public`                              |
-| clientID                      | Client id used to connect to the server                                             | `00000000-0000-0000-0000-000000000000` |
-| all                           | Merge all regions into a single playlist and epg                                    | true                                   |
-| chno                          | Start channel numbering at the provided value, spans all regions                    | N/A                                    |
-| group                         | Specify the grouping within the playlist                                            | `genre`                                |
-| regionalize                   | Append the country code to the channel id                                           | true                                   |
-| excludeGroups                 | Exclude the groups that match the regular expression                                | false                                  |
-| excludeChannels               | Exclude the channels that match the regular expression                              | false                                  |
-| uniqueClientid                | Generate a unique id for each client requesting the playlist via the inbuilt server | true                                   |
-| randomClientid                | Generate a random id for each request of the playlist via the the inbuilt server    | true                                   |
-| refresh                       | Automatically refetch the files at the provided interval (in seconds)               | 3600                                   |
-| xTvgUrl                       | Specify a custom x-tvg-url value in the EXTM3U header                               | false                                  |
+| Variable                      | Description                                                                          | Default                                |
+|-------------------------------|------------------------------------------------------------------------------------- |----------------------------------------|
+| outdir                        | The destination directory where the generated files will be stored.                  | `/public`                              |
+| clientID                      | Client id used to connect to the server.                                             | `00000000-0000-0000-0000-000000000000` |
+| all                           | Merge all regions into a single playlist and epg.                                    | true                                   |
+| chno                          | Start channel numbering at the provided value, spans all regions.                    | N/A                                    |
+| group                         | Specify the grouping within the playlist.                                            | `genre`                                |
+| regionalize                   | Append the country code to the channel id.                                           | true                                   |
+| excludeGroups                 | Exclude the groups that match the regular expression.<br>
+An example value could be `^Local News$`, `Español` or `(News|Español)`                                                | false                                  |
+| excludeChannels               | Exclude the channels that match the regular expression.                              | false                                  |
+| uniqueClientid                | Generate a unique id for each client requesting the playlist via the inbuilt server. | true                                   |
+| randomClientid                | Generate a random id for each request of the playlist via the the inbuilt server.    | true                                   |
+| refresh                       | Automatically refetch the files at the provided interval (in seconds).               | 3600                                   |
+| xTvgUrl                       | Specify a custom x-tvg-url value in the EXTM3U header.                               | false                                  |
 
 ### Compose file
 
