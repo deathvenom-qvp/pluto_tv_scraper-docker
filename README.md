@@ -40,3 +40,21 @@ If you include more than one country in the mapping section `plutotv_all.m3u8` a
 | randomClientid                | Generate a random id for each request of the playlist via the the inbuilt server    | true                                   |
 | refresh                       | Automatically refetch the files at the provided interval (in seconds)               | 3600                                   |
 | xTvgUrl                       | Specify a custom x-tvg-url value in the EXTM3U header                               | false                                  |
+
+### Compose file
+
+```sh
+version: '3.3'
+services:
+  epg:
+    image: git.claeyscloud.com/david/pluto-tv-scraper:latest
+    volumes:
+      # add a mapping in order to add the channels file
+      - /docker/pluto:/config
+    ports:
+      - 5050:5050
+    environment:
+      # specify the time zone for the server
+      - TZ=Etc/UTC
+    restart: unless-stopped
+```
