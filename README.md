@@ -27,6 +27,7 @@ If you include more than one country in the mapping section `plutotv_all.m3u8` a
 ##### Options:
 
 | Variable                      | Description                                                                         | Default                                |
+|-------------------------------|-------------------------------------------------------------------------------------|----------------------------------------|
 | outdir                        | The destination directory where the generated files will be stored.                 | `/public`                              |
 | clientID                      | Client id used to connect to the server                                             | `00000000-0000-0000-0000-000000000000` |
 | all                           | Merge all regions into a single playlist and epg                                    | true                                   |
