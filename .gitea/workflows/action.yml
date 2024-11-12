@@ -29,11 +29,17 @@ jobs:
           registry: git.claeyscloud.com
           username: nologin
           password: ${{ secrets.PACKAGE_TOKEN }}
+      - name: Login to DockerHub container registry
+        uses: https://github.com/docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKER_HUB_USERNAME}}
+          password: ${{ secrets.DOCKER_HUB_PASSWORD }}
       - name: Extract metadata (tags, labels) for Docker
         id: meta
         uses: docker/metadata-action@v5
         with:
             images: |
+                davidquinonescl/pluto-tv-scraper
                 git.claeyscloud.com/david/pluto-tv-scraper
             tags: |
                type=semver,pattern={{raw}}

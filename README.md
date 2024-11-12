@@ -49,6 +49,8 @@ version: '3.3'
 services:
   epg:
     image: git.claeyscloud.com/david/pluto-tv-scraper:latest
+    #image: ghcr.io/davidclaeysquinones/pluto-tv-scraper:latest
+    #image: davidquinonescl/pluto-tv-scraper:latest
     volumes:
       # add a mapping in order to add a custom config file
       #- /docker/pluto:/config
